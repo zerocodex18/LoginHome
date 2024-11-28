@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.wave {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(90vh - 10px);
+    margin-top: 10px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    animation: fadeIn 2s ease-out;
+}
+
+.small-card {
+    width: 10rem;
+    padding: 7px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 60%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+    transition: transform 0.3s ease-in-out;
+}
+
+.password-toggle.bi-eye-fill {
+    transform: rotate(360deg);
+}
+
+.password-toggle.bi-eye-slash-fill {
+    transform: rotate(0deg);
+}
+
+.btn-custom {
+    padding-top: 16px;
+}
+/* Tombol Login dengan animasi klik */
+.btn-custom .btn {
+    position: relative;
+    padding: 7px 17px; /* Ukuran tombol */
+    font-size: 16px; /* Ukuran font */
+    font-weight: 600; /* Berat font */
+    border-radius: 5px; /* Sudut melengkung */
+    transition: transform 0.1s ease, box-shadow 0.2s ease; /* Transisi untuk efek */
+}
+
+.btn-custom .btn:hover {
+    transform: scale(1.05); /* Perbesar sedikit tombol saat hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambah bayangan saat hover */
+}
+
+.btn-custom .btn:active {
+    transform: scale(0.98); /* Mengecilkan tombol saat ditekan */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Tambah bayangan lebih besar saat aktif */
+    background-color: #0056b3; /* Ubah warna latar belakang saat ditekan */
+}
+
+.text-custom {
+    font-size: 12px;
+}
+
+.text-custom-1 {
+    font-size: 8px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    margin-top: -40px;
+    animation: fadeIn 2s ease-out;
+}
+.icon-container i:hover{
+ color: white;
+}
+
+.text-custom-2 {
+    color: white;
+    font-size: 10px;
+}
+//* Custom Styling untuk Toast Sukses */
+.toast {
+    background-color: #28a745; /* Green background for success */
+    color: white;
+    border-radius: 8px;
+    opacity: 0.9;
+    transition: opacity 0.5s ease;
+}
+
+/* Toast Header untuk sukses */
+.toast-header {
+    background-color: #218838; /* Darker green header for success */
+    color: white;
+    font-weight: bold;
+}
+
+/* Toast Body untuk sukses */
+.toast-body {
+    font-size: 14px;
+}
+
+/* Custom Styling untuk Toast Gagal */
+.toast-error {  
+    background-color: #dc3545; /* Red background for error */
+    color: white;
+}
+
+.toast-error .toast-header {
+    background-color: #c82333; /* Darker red header for error */
+}
+
+.toast-error .toast-body {
+    font-size: 14px;
+}
+
+/* Menambahkan animasi fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+    .small-card {
+        width: 15rem;
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .wave {
+        height: 400px;
+    }
+
+    .icon-container {
+        gap: 15px;
+        margin-top: -80px;
+    }
+
+    .text-custom-2 {
+        font-size: 8px;
+    }
+}
+
+.carousel-container {
+    margin-top: 40px;
+    animation: fadeIn 2s ease-out;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+}
